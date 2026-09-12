@@ -1,0 +1,87 @@
+/* ==========================================================================
+   CircularX — Global tokens & reset
+   ========================================================================== */
+
+:root{
+  /* Brand palette — deep emerald (circularity) + warm gold (value/reuse) */
+  --color-bg: #F7F8F4;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F1F4EF;
+  --color-ink: #14201B;
+  --color-ink-soft: #4A5B53;
+  --color-muted: #7C8B83;
+  --color-border: #E4E9E1;
+
+  --color-primary: #0E5F45;
+  --color-primary-dark: #0A4834;
+  --color-primary-light: #E4F2EA;
+  --color-accent: #D9A441;
+  --color-accent-dark: #B9862B;
+
+  --color-success: #1F9D55;
+  --color-danger: #D65A4A;
+
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 32, 27, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 32, 27, 0.08);
+  --shadow-lg: 0 20px 48px rgba(14, 95, 69, 0.14);
+
+  --container-w: 1240px;
+  --transition: 200ms cubic-bezier(.4,0,.2,1);
+
+  color-scheme: light;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 1.15;
+  margin: 0;
+}
+
+p{ margin: 0; }
+
+a{ color: inherit; text-decoration: none; }
+
+img{ max-width: 100%; display: block; }
+
+button, input, select{ font: inherit; color: inherit; }
+
+button{ cursor: pointer; border: none; background: none; }
+
+ul, ol{ margin: 0; padding: 0; list-style: none; }
+
+.container{
+  width: 100%;
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+::selection{ background: var(--color-accent); color: #fff; }
+
+/* Scrollbar (webkit) — subtle, premium */
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: transparent; }
+::-webkit-scrollbar-thumb{ background: #C9D3C4; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover{ background: #AFBCA8; }
